@@ -5,13 +5,9 @@
 </template>
 
 <script>
-    export default {
-        setup () {
-            
-
-            return {}
-        }
-    }
+    definePageMeta({
+        layout: 'products'
+    })
 </script>
 
 <style scoped>
