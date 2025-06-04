@@ -3,17 +3,15 @@
         <h2>About</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores rem voluptatem aliquam totam quidem, omnis veniam nam aliquid ipsum.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores rem voluptatem aliquam totam quidem, omnis veniam nam aliquid ipsum.</p>
+        <div>{{ data }}</div>
     </div>
 </template>
 
-<script>
-    export default {
-        setup () {
-            
-
-            return {}
-        }
-    }
+<script setup>
+    const { data } = await useFetch('/api/ninja?name=mario', {
+        method: 'post',
+        body: { age: 30 }
+    })
 </script>
 
 <style scoped>
